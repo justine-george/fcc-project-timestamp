@@ -22,7 +22,8 @@
   "keywords": [
     "node",
     "express",
-    "freeCodeCamp"
+    "freeCodeCamp",
+    "project"
   ],
   "license": "MIT"
 }
