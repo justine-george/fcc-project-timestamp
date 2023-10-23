@@ -26,18 +26,10 @@ app.get("/api/hello", function (req, res) {
 // return date in unix and utc format
 app.get("/api/:date", (req, res) => {
   let dateParam = req.params.date.trim();
+  let date = new Date(dateParam);
 
-  const unixRegex = /^\d+$/;
-  const dateRegex = /^\d{4}-\d{1,2}-\d{1,2}$/;
-
-  let date;
-
-  if (unixRegex.test(dateParam)) {
+  if (!isNaN(dateParam) && date.toString() === "Invalid Date") {
     date = new Date(parseInt(dateParam));
-  } else if (dateRegex.test(dateParam)) {
-    date = new Date(dateParam);
-  } else {
-    return res.status(400).json({ error: "Invalid Date" });
   }
 
   if (isNaN(date.getTime())) {
