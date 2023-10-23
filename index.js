@@ -28,7 +28,7 @@ app.get("/api/:date", (req, res) => {
   let dateParam = req.params.date.trim();
 
   const unixRegex = /^\d+$/;
-  const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+  const dateRegex = /^\d{4}-\d{1,2}-\d{1,2}$/;
 
   let date;
 
