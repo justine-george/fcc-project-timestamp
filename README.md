@@ -1,42 +1,69 @@
 # Timestamp Microservice
 
-## Live at:
+The Timestamp Microservice is a simple tool that allows users to convert between UNIX timestamps and UTC dates, and vice versa. It was built as part of the [FreeCodeCamp](https://www.freecodecamp.org/) APIs and Microservices certification.
 
-https://fcc-project-timestamp.fly.dev/
+## Live Demo
 
-## Tech Stack:
+Check out the microservice [here](https://fcc-project-timestamp.fly.dev/).
+
+## Tech Stack
+
 - Node.js
 - Express.js
 - fly.io
 
-## API Usage:
+## API Usage
+
+### 1. Converting a Date String to Timestamp
+
+- Endpoint: `GET /api/:date_string`
+- Description: Returns a JSON object with the unix timestamp and UTC date string of the given date string
+- Usage: `GET https://fcc-project-timestamp.fly.dev/api/2023-01-01`
+- Response:
 
 ```
-https://fcc-project-timestamp.fly.dev/api/2023-01-01
-
-Response JSON: {"unix":1672531200000,"utc":"Sun, 01 Jan 2023 00:00:00 GMT"}
+{
+    "unix":1672531200000,
+    "utc":"Sun, 01 Jan 2023 00:00:00 GMT"
+}
 ```
 
-```
-https://fcc-project-timestamp.fly.dev/api/1672531200000
+### 2. Converting a Timestamp to Date String
 
-Response JSON: {"unix":1672531200000,"utc":"Sun, 01 Jan 2023 00:00:00 GMT"}
-```
+- Endpoint: `GET /api/:timestamp`
+- Description: Returns a JSON object with the unix timestamp and UTC date string of the given timestamp
+- Usage: `GET https://fcc-project-timestamp.fly.dev/api/1672531200000`
+- Response:
 
 ```
-https://fcc-project-timestamp.fly.dev/api/
-
-Response JSON: Returns current time in the above JSON format
+{
+    "unix":1672531200000,
+    "utc":"Sun, 01 Jan 2023 00:00:00 GMT"
+}
 ```
 
-## Run locally:
+### 3. Getting the Current Timestamp and Date
+
+- Endpoint: `GET /api/`
+- Description: Returns a JSON object with the unix timestamp and UTC date string of the current time
+- Usage: `GET https://fcc-project-timestamp.fly.dev/api/`
+- Response:
+
+```
+{
+    "unix":<current_unix_timestamp>,
+    "utc":"<current_utc_date>"
+}
+```
+
+## Run locally
 
 ```
 npm install
 npm start
 ```
 
-## Deploy on fly.io:
+## Deploy on fly.io
 
 ```
 fly launch
