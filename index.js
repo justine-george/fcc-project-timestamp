@@ -43,6 +43,10 @@ app.get("/api/:date", (req, res) => {
     res.json({ error: "Invalid Date" });
     return;
   }
+  if (utcDate === "Invalid Date" || unixDate === null) {
+    res.json({ error: "Invalid Date" });
+    return;
+  }
   res.json({ unix: unixDate, utc: utcDate });
 });
 
