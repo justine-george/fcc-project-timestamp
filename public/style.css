@@ -1,17 +1,17 @@
 /****** Main Styling ******/
 
 body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	color: #222;
-	background-color: #FaFaFa;
-	text-align: center;
-	line-height: 1.4em;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  color: #222;
+  background-color: #fafafa;
+  text-align: center;
+  line-height: 1.4em;
 }
 
 .container {
-	padding: 0;
-	margin-top: 40px;
+  padding: 0;
+  margin-top: 40px;
 }
 
 h3 {
@@ -19,22 +19,17 @@ h3 {
 }
 
 hr {
-	margin: 25px;
-}
-
-.footer {
-	margin-top: 40px;
+  margin: 25px;
 }
 
 code {
-  font-family: monospace;
+  font-family: "Sometype Mono", monospace;
   padding: 2px;
   color: black;
-  background-color: #fff;
 }
 
 ul {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 li {
@@ -42,5 +37,5 @@ li {
 }
 
 a {
-	color: #2574A9;
+  color: #2574a9;
 }

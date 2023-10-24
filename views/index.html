@@ -1,31 +1,60 @@
 <!DOCTYPE html>
-
 <html>
-   <head>
-      <title>Timestamp Microservice | freeCodeCamp.org</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="style.css" rel="stylesheet" type="text/css">
-   </head>
+  <head>
+    <title>Timestamp Microservice</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-   <body>
+  <body>
     <h1>Timestamp Microservice</h1>
     <hr />
     <div class="container">
-      <h3>Example Usage:</h3>
+      <h3>API Usage:</h3>
       <ul>
-        <li><a href="api/2015-12-25">[project url]/api/2015-12-25</a></li>
-        <li><a href="api/1451001600000">[project url]/api/1451001600000</a></li>
+        <li>
+          <a href="api/2023-01-01">/api/2023-01-01</a> (Converting a Date String
+          to Timestamp)
+        </li>
+        <li>
+          <a href="api/1672531200000">/api/1672531200000</a> (Converting a
+          Timestamp to Date String)
+        </li>
+        <li>
+          <a href="api/">/api/</a> (Getting the Current Timestamp and Date)
+        </li>
       </ul>
 
-      <h3>Example Output:</h3>
+      <h3>Output:</h3>
       <p>
-        <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
+        <code
+          >{"unix": 1672531200000, "utc": "Sun, 01 Jan 2023 00:00:00 GMT"}</code
+        >
+        (For both Date String to Timestamp and Timestamp to Date String
+        conversions)
+      </p>
+      <p>
+        <code
+          >{"unix": &ltcurrent_unix_timestamp&gt, "utc":
+          "&ltcurrent_utc_date&gt"}</code
+        >
+        (For Getting the Current Timestamp and Date)
       </p>
     </div>
-    <div class="footer">
+
+    <hr />
+    <div class="container">
       <p>
-        By <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a>
+        Check out the GitHub repo
+        <a
+          href="https://github.com/justine-george/fcc-project-timestamp/"
+          target="_blank"
+          >here</a
+        >.
       </p>
     </div>
   </body>
