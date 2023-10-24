@@ -1,16 +1,10 @@
 # Timestamp Microservice
 
-The Timestamp Microservice is a simple tool that allows users to convert between UNIX timestamps and UTC dates, and vice versa. It was built as part of the [FreeCodeCamp](https://www.freecodecamp.org/) APIs and Microservices certification.
+The Timestamp Microservice is a simple tool that allows users to convert between UNIX timestamps and UTC dates, and vice versa.
 
 ## Live Demo
 
 Check out the microservice [here](https://fcc-project-timestamp.fly.dev/).
-
-## Tech Stack
-
-- Node.js
-- Express.js
-- fly.io
 
 ## API Usage
 
@@ -55,6 +49,12 @@ Check out the microservice [here](https://fcc-project-timestamp.fly.dev/).
     "utc":"<current_utc_date>"
 }
 ```
+
+## Tech Stack
+
+- Node.js
+- Express.js
+- fly.io
 
 ## Run locally
 

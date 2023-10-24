@@ -1,5 +1,3 @@
-require("dotenv").config();
-
 // init project
 var express = require("express");
 var app = express();
@@ -18,9 +16,9 @@ app.get("/", function (req, res) {
 });
 
 // API endpoints
-// return json object with greeting
-app.get("/api/hello", function (req, res) {
-  res.json({ greeting: "hello API" });
+// return healthy status
+app.get("/api/ping", function (req, res) {
+  res.json({ status: "healthy" });
 });
 
 // return date in unix and utc format
@@ -50,7 +48,4 @@ app.get("/api", (req, res) => {
   res.json({ unix: unixDate, utc: utcDate });
 });
 
-// listen for requests
-var listener = app.listen(process.env.PORT, function () {
-  console.log("Your app is listening on port " + listener.address().port);
-});
+module.exports = app;
